@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@stores/libs/testing": ["libs/libs/testing/src/index.ts"]
+      "@stores/example": ["libs/example/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

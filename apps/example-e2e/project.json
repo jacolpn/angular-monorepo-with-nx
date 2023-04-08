@@ -1,19 +1,19 @@
 {
-  "name": "testing-e2e",
+  "name": "example-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/testing-e2e/src",
+  "sourceRoot": "apps/example-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/testing-e2e/cypress.config.ts",
-        "devServerTarget": "testing:serve:development",
+        "cypressConfig": "apps/example-e2e/cypress.config.ts",
+        "devServerTarget": "example:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "testing:serve:production"
+          "devServerTarget": "example:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/testing-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/example-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["testing"]
+  "implicitDependencies": ["example"]
 }

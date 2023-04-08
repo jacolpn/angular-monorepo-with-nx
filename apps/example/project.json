@@ -1,22 +1,22 @@
 {
-  "name": "testing",
+  "name": "example",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/testing/src",
+  "sourceRoot": "apps/example/src",
   "prefix": "stores",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/testing",
-        "index": "apps/testing/src/index.html",
-        "main": "apps/testing/src/main.ts",
+        "outputPath": "dist/apps/example",
+        "index": "apps/example/src/index.html",
+        "main": "apps/example/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/testing/tsconfig.app.json",
+        "tsConfig": "apps/example/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/testing/src/favicon.ico", "apps/testing/src/assets"],
-        "styles": ["apps/testing/src/styles.scss"],
+        "assets": ["apps/example/src/favicon.ico", "apps/example/src/assets"],
+        "styles": ["apps/example/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -50,10 +50,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "testing:build:production"
+          "browserTarget": "example:build:production"
         },
         "development": {
-          "browserTarget": "testing:build:development"
+          "browserTarget": "example:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -61,21 +61,21 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "testing:build"
+        "browserTarget": "example:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/testing/**/*.ts", "apps/testing/**/*.html"]
+        "lintFilePatterns": ["apps/example/**/*.ts", "apps/example/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/testing/jest.config.ts",
+        "jestConfig": "apps/example/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
